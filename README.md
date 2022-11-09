@@ -1,65 +1,46 @@
-# Phase 1 Project
+# Exploratory Data Analysis for Microsoft Studio
 
-You've made it all the way through the first phase of this course - take a minute to celebrate your awesomeness!
+##### Author : Nurulain Abdi
 
-![awesome](https://raw.githubusercontent.com/learn-co-curriculum/dsc-phase-1-project/master/awesome.gif)
+## Overview
 
-Now you will put your new skills to use with a large end-of-Phase project! This project should take 20 to 30 hours to complete.
+#### Project: 
 
-## Project Overview
+Microsoft is a tech company that wants to venture into video content creation and they have decided to create a new movie studio.
 
-For this project, you will use exploratory data analysis to generate insights for a business stakeholder.
+#### Goal: 
+Exploring the types of films that are topping box office movies in terms of income, genre and the length of films to be produced using different data analysis methods to help Microsoft’s team decide what type of films to create.
 
-### Business Problem
+#### Data I worked with:
 
-Microsoft sees all the big companies creating original video content and they want to get in on the fun. They have decided to create a new movie studio, but they don’t know anything about creating movies. You are charged with exploring what types of films are currently doing the best at the box office. You must then translate those findings into actionable insights that the head of Microsoft's new movie studio can use to help decide what type of films to create.
+•	imdb title.basics
+•	imdb.title.ratings
+•	bom.movie_gross
 
-### The Data
 
-In the folder `zippedData` are movie datasets from:
+## Methods
 
-* [Box Office Mojo](https://www.boxofficemojo.com/)
-* [IMDB](https://www.imdb.com/)
-* [Rotten Tomatoes](https://www.rottentomatoes.com/)
-* [TheMovieDB](https://www.themoviedb.org/)
-* [The Numbers](https://www.the-numbers.com/)
+#### Data cleaning :
 
-It is up to you to decide what data from this to use and how to use it. If you want to make this more challenging, you can scrape websites or make API calls to get additional data. If you are feeling overwhelmed or behind (e.g. struggled with the Phase 1 Code Challenge), we recommend you use only the following data files:
+I first imported all the necessary libraries that I will use for explotary data analysis, I then cleaned the data by getting rid of missing values by either dropping them entirely or adding zero in order to maintain data continuity
+There were a lot of duplicated values in the titles of the movies which I had to drop
+I prepared each data frame separately and studied the data across all the three to find the primary keys I will use to Join them so I can explore them as one data set.
 
-* imdb.title.basics
-* imdb.title.ratings
-* bom.movie_gross
+I also added a column Gross_income which is the sum of domestic_gross and foreign_gross because the client did not specify his target market.
 
-## Deliverables
+For the first table I merged  imdb.title.basics with  imdb.title.ratings using the column that was common between them, I first made the common an index on each data frame separately and I joined them using Inner join so that we can get rid of the data that won’t match on both data frames due to the difference in row and column lengths otherwise we’d have a lot of missing values.
 
-There are three deliverables for this project:
+After joining these two tables and I then joined with the third table and began my analysis.
 
-* A **GitHub repository**
-* A **Jupyter Notebook**
-* A **non-technical presentation**
+## Results
 
-Review the "Project Submission & Review" page in the "Milestones Instructions" topic for instructions on creating and submitting your deliverables. Refer to the rubric associated with this assignment for specifications describing high-quality deliverables.
 
-### Key Points
 
-* **Your analysis should yield three concrete business recommendations.** The ultimate purpose of exploratory analysis is not just to learn about the data, but to help an organization perform better. Explicitly relate your findings to business needs by recommending actions that you think the business (Microsoft) should take.
+## Conclusions
 
-* **Communicating about your work well is extremely important.** Your ability to provide value to an organization - or to land a job there - is directly reliant on your ability to communicate with them about what you have done and why it is valuable. Create a storyline your audience (the head of Microsoft's new movie studio) can follow by walking them through the steps of your process, highlighting the most important points and skipping over the rest.
+- Based on the analysed data Microsoft should create a genre of films that are adventure, action, sci-fi or comedy. Not only has the data shown that they are the most highly rated but they also the most profitable. It’s a win win really.
 
-* **Use plenty of visualizations.** Visualizations are invaluable for exploring your data and making your findings accessible to a non-technical audience. Spotlight visuals in your presentation, but only ones that relate directly to your recommendations. Simple visuals are usually best (e.g. bar charts and line graphs), and don't forget to format them well (e.g. labels, titles).
+- Microsoft can also choose to acquire BV studio which is the most profitable  both in locally and internationally.
 
-## Getting Started
 
-Please start by reviewing this assignment, the rubric at the bottom of it, and the "Project Submission & Review" page. If you have any questions, please ask your instructor ASAP.
 
-Next, we recommend you check out [the Phase 1 Project Templates and Examples repo](https://github.com/learn-co-curriculum/dsc-project-template) and use the MVP template for your project.
-
-Alternatively, you can fork [the Phase 1 Project Repository](https://github.com/learn-co-curriculum/dsc-phase-1-project), clone it locally, and work in the `student.ipynb` file. Make sure to also add and commit a PDF of your presentation to your repository with a file name of `presentation.pdf`.
-
-## Project Submission and Review
-
-Review the "Project Submission & Review" page in the "Milestones Instructions" topic to learn how to submit your project and how it will be reviewed. Your project must pass review for you to progress to the next Phase.
-
-## Summary
-
-This project will give you a valuable opportunity to develop your data science skills using real-world data. The end-of-phase projects are a critical part of the program because they give you a chance to bring together all the skills you've learned, apply them to realistic projects for a business stakeholder, practice communication skills, and get feedback to help you improve. You've got this!
