@@ -60,7 +60,7 @@ Further data analysis could give more insights onto the actual profitability of 
 
 - More data that will help do a cost benefit analysis for the actual cost of creating these movies.
 
--A predictive model to make an analysis on whether Microsoft should acquire the best performing movie studio or stick to starting theirs from scratch.
+- A predictive model to make an analysis on whether Microsoft should acquire the best performing movie studio or stick to starting theirs from scratch.
 
 ## For more information
 
