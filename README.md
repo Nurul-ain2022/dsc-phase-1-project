@@ -64,7 +64,7 @@ Further data analysis could give more insights onto the actual profitability of 
 
 ## For more information
 
-See the full analysis in the Jupyter Notebook or review this presentation.
+See the full analysis in the [Jupyter Notebook](https://github.com/Nurul-ain2022/dsc-phase-1-project/blob/master/student.ipynb) or review this presentation.
 
 For additional info, contact Nurulain Abdi at Nurulain.maalim@student.moringaschool.com
 
